@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32A80D5A-C772-4C19-AF85-2B91A24E3A5C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Orwell.TSP</RootNamespace>
+    <AssemblyName>Orwell.TSP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Addebito.cs" />
+    <Compile Include="Annullo.cs" />
+    <Compile Include="ATM.cs" />
+    <Compile Include="BollettinoBianco.cs" />
+    <Compile Include="BollettinoPremarcato.cs" />
+    <Compile Include="BollettinoTares.cs" />
+    <Compile Include="Conferma.cs" />
+    <Compile Include="ConfermaBollettinoBianco.cs" />
+    <Compile Include="ConfermaBollettinoPremarcato.cs" />
+    <Compile Include="ConfermaRicarica.cs" />
+    <Compile Include="ConvertTransactionResponse.cs" />
+    <Compile Include="DatiAnagrafici.cs" />
+    <Compile Include="DatiAntiriciclaggio.cs" />
+    <Compile Include="DatiBeneficiario.cs" />
+    <Compile Include="DatiBollettinoBianco.cs" />
+    <Compile Include="DatiBollettinoPremarcato.cs" />
+    <Compile Include="DatiCliente.cs" />
+    <Compile Include="DatiOrdinante.cs" />
+    <Compile Include="DatiTitolare.cs" />
+    <Compile Include="EasyChannel.cs" />
+    <Compile Include="EasyChannelRichiesta.cs" />
+    <Compile Include="EasyChannelRisposta.cs" />
+    <Compile Include="Maggiorazione.cs" />
+    <Compile Include="MessaggioErrore.cs" />
+    <Compile Include="Quietanza.cs" />
+    <Compile Include="Request\ForBollettinoBianco.cs" />
+    <Compile Include="Request\ForBollettinoPremarcato.cs" />
+    <Compile Include="Request\ForPostePay.cs" />
+    <Compile Include="ResourceException.Designer.cs" />
+    <Compile Include="RichiestaTagli.cs" />
+    <Compile Include="TaglioLibero.cs" />
+    <Compile Include="TaglioRicarica.cs" />
+    <Compile Include="TagliRicarica.cs" />
+    <Compile Include="Tariffa.cs" />
+    <Compile Include="Testata.cs" />
+    <Compile Include="Tributo.cs" />
+    <Compile Include="TypeOfBollettini.cs" />
+    <Compile Include="TypeOfTransaction.cs" />
+    <Compile Include="Validator\ResponseValidator.cs" />
+    <Compile Include="Validator\RequestValidator.cs" />
+    <Compile Include="Validator\Validator.cs" />
+    <Compile Include="Verifica.cs" />
+    <Compile Include="Versamento.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ResourceException.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
